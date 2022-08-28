@@ -49,7 +49,8 @@ SER30K dataset is used in the following folder structure:
 
 ## Model Zoo
 LORA and LORA-V on SER30K dataset.
-The weights file is coming soon.
+
+The checkpoint files are coming soon.
 <table>
     <tr>
         <td>Model</td>
@@ -110,16 +111,6 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port=6666 \
 --eval
 ```
 
-python -m torch.distributed.launch --nproc_per_node=1 --master_port=6666 \
---use_env main.py \
---config configs/pvt/pvt_small.py \
---resume checkpoints/SER/checkpoint.pth \
---dataset SER \
---data-path /home/ubuntu/lsz/MM2022/SER_Dataset \
---batch-size 16 \
---alpha 8 \
---locals 1 1 1 0 \
---eval
 
 ## Citation
 If you find this code to be useful for your research, please consider citing.
