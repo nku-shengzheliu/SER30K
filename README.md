@@ -1,6 +1,6 @@
 <div align="center">
 
-# SER30K: A Large-Scale Dataset for Sticker Emotion Recognition
+## SER30K: A Large-Scale Dataset for Sticker Emotion Recognition
 
 <a href="https://pytorch.org/get-started/locally/"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-ee4c2c?logo=pytorch&logoColor=white"></a>
 [![Conference](https://img.shields.io/badge/ACM%20MM-2022-orange)](https://2022.acmmm.org/)
@@ -31,6 +31,7 @@ If you need the SER30K dataset for academic purposes, please download the [appli
 
 In addition, please download the ImageNet pre-trained model weights for PVT-small from [PVT](https://github.com/whai362/PVT/tree/v2/classification) and place it in the `./weight` folder.
 
+
 ## Data 
 SER30K dataset is used in the following folder structure:
 ```
@@ -49,31 +50,28 @@ SER30K dataset is used in the following folder structure:
 
 ## Model Zoo
 LORA and LORA-V on SER30K dataset.
-
-The checkpoint files are coming soon.
 <table>
     <tr>
         <td>Model</td>
         <td>Accuracy</td>
-        <td>Size</td>
+        <td>Image size</td>
         <td>Url</td>
     </tr>
     <tr>
         <td rowspan="2">LORA-V</td>
         <td rowspan="2">69.22</td>
         <td rowspan="2">448</td>
-        <td><a href="https://drive.google.com">Baidu drive</a></td>
+        <td><a href="https://pan.baidu.com/s/1DmiHc1xK88qgJ3Xk2QhAJA">Baidu drive[1nm3]</a></td>
     </tr>
-    <tr><td><a href="https://drive.google.com">Google drive</a></td></tr>
+    <tr><td><a href="https://drive.google.com/file/d/1fHRPoA92QyCPJWG2nA0VQIc_2q7n9nho/view?usp=sharing">Google drive</a></td></tr>
     <tr>
         <td rowspan="2">LORA</td>
         <td rowspan="2">70.73</td>
         <td rowspan="2">448</td>
-        <td><a href="https://drive.google.com">Baidu drive</a></td>
+        <td><a href="https://pan.baidu.com/s/1R__q7cC831ettAJaoxllZQ">Baidu drive[5bup]</a></td>
     </tr>
-    <tr><td><a href="https://drive.google.com">Google drive</a></td></tr>
+    <tr><td><a href="https://drive.google.com/file/d/1eRDX8w1zCR-LCQr9foCyk92fEabkovSv/view?usp=sharing">Google drive</a></td></tr>
 </table>
-
 
 
 ## Training
@@ -111,17 +109,32 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port=6666 \
 --eval
 ```
 
+Evaluate LORA-V model performance on SER30K:
+```
+python -m torch.distributed.launch --nproc_per_node=1 --master_port=6666 \
+--use_env main_V.py \
+--config configs/pvt/pvt_small.py \
+--resume checkpoints/SER/checkpoint_v.pth \
+--dataset SER_V \
+--data-path {path to SER30K dataset} \
+--batch-size 16 \
+--alpha 8 \
+--locals 1 1 1 0 \
+--eval
+```
+
 
 ## Citation
 If you find this code to be useful for your research, please consider citing.
 ```
-@inproceedings{liu2022ser30k,
+@inproceedings{liu2022ser,
   title={SER30K: A Large-Scale Dataset for Sticker Emotion Recognition},
   author={Liu, Shengzhe and Zhang, Xin and Yang, Jufeng},
   booktitle={ACM MM},
   year={2022}
 }
 ```
+
 
 ## Acknowledgement
 
