@@ -9,7 +9,7 @@
 </div>
 
 This is the official repository of our ACM Multimedia 2022 Work.
-SER30K dataset and pytorch training/validation code for **LOcal Re-Attention multimodal network (LORA)**.
+**SER30K dataset** and pytorch training/validation code for **LOcal Re-Attention multimodal network (LORA)**.
 
 <p align="center">
 <img src="./pipeline.png" alt="drawing" width="90%" height="90%"/>
@@ -19,12 +19,12 @@ SER30K dataset and pytorch training/validation code for **LOcal Re-Attention mul
 
 ## Abstract
 
-<img src="./motivation.png" width="50%" align="right">With the popularity of instant messaging applications, online chatting plays an essential role in our daily life. The prevailing use of stickers to express emotions in online chatting leads to the necessity of multimodal sticker emotion recognition. Considering the lack of sticker emotion data, we collect a large-scale sticker emotion recognition dataset named SER30K. It consists of a total of 1,887 sticker themes with total 30,739 sticker images. Some commonly used images, such as realistic images and facial expression images, have been well studied in the field of emotion analysis. However, it is still challenging to understand the emotion of sticker images. Since the characteristics in stickers from the same theme are similar, we can only accurately predict the emotion by capturing the local information (e.g., expressions, poses) and understanding the global information (e.g., relations among objects). To tackle this challenge, we propose a LOcal Re-Attention multimodal network (LORA) to learn sticker emotions in an end-to-end manner. Different from previous approaches using convolutional neural networks, LORA employs the vision transformer to extract visual features, leading to better capture the global relations. In addition, we design a local re-attention module to focus on important region information. Then a simple but efficient modal fusion module combines visual and language features. Extensive experiments are performed on the SER30K and other emotion recognition datasets, demonstrating the effectiveness of our proposed method.
+<img src="./motivation.png" width="40%" align="right">With the popularity of instant messaging applications, online chatting plays an essential role in our daily life. The prevailing use of stickers to express emotions in online chatting leads to the necessity of multimodal sticker emotion recognition. Considering the lack of sticker emotion data, we collect a large-scale sticker emotion recognition dataset named SER30K. It consists of a total of 1,887 sticker themes with total 30,739 sticker images. Some commonly used images, such as realistic images and facial expression images, have been well studied in the field of emotion analysis. However, it is still challenging to understand the emotion of sticker images. Since the characteristics in stickers from the same theme are similar, we can only accurately predict the emotion by capturing the local information (e.g., expressions, poses) and understanding the global information (e.g., relations among objects). To tackle this challenge, we propose a LOcal Re-Attention multimodal network (LORA) to learn sticker emotions in an end-to-end manner. Different from previous approaches using convolutional neural networks, LORA employs the vision transformer to extract visual features, leading to better capture the global relations. In addition, we design a local re-attention module to focus on important region information. Then a simple but efficient modal fusion module combines visual and language features. Extensive experiments are performed on the SER30K and other emotion recognition datasets, demonstrating the effectiveness of our proposed method.
 
 
 ## SER30K dataset
 
-If you need the SER30K dataset for academic purposes, please download the [application form](https://github.com/nku-shengzheliu/SER30K/blob/main/SER_Data_Access_Form.docx) and fill out the request information, then send it to ***nku_liusz@163.com***. We will process your application as soon as possible.
+If you need the SER30K dataset for academic purposes, please download the [application form](https://github.com/nku-shengzheliu/SER30K/blob/main/SER_Data_Access_Form.docx) and fill out the request information, then send it to *nku_liusz#163.com ('#'->'@')*. We will process your application as soon as possible.
 
 
 
