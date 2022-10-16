@@ -133,7 +133,7 @@ python -m torch.distributed.launch --nproc_per_node=1 --master_port=6666 \
 If you find this code to be useful for your research, please consider citing.
 ```
 @inproceedings{liu2022ser,
-  title={SER30K: A Large-Scale Dataset for Sticker Emotion Recognition},
+  title={{SER30K}: A Large-Scale Dataset for Sticker Emotion Recognition},
   author={Liu, Shengzhe and Zhang, Xin and Yang, Jufeng},
   booktitle={ACM MM},
   year={2022}
